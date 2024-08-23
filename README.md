@@ -7,7 +7,7 @@
 
 **RUNNING THE SCRIPT:**
 ./SCRIPT_NAME -d "destination" -s "source" -o "statistics file"
-These source, destination, statistics CSV file should be command line arguements.
+These source, destination, statistics CSV file should be command line arguements, can be specified in any order with the corresponding options.
 
 we will use crontabs to schedule the back-up every-day at 12am.
 
