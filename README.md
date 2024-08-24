@@ -1,8 +1,8 @@
 # BACKUP_SCRIPT
-| Option | Arguement | Semantics |
+| Option | Arguement | Requirements |
 |---|---|---|
-| -s | source | The directory that should be back-up |
-| -d | destination | The directory where the copy files to be stored |
+| -s | source | The directory that should be back-up, This must be the script|
+| -d | destination | This is created even  |
 | -o | Statistics | The Statistics of the every back-up are stored here for future use |
 
 **RUNNING THE SCRIPT:**
