@@ -5,8 +5,8 @@ This Script provides an automated backup procedure scheduled at 12am every-day. 
 The Script efficiently Backup files by avoiding redundant overhead of copying files which are not modified Since last backup.
 
 **USAGE OF THE SCRIPT:**
-./practice.sh -d "destination" -s "source" -o "backup_statistics.csv"
-These source, destination, statistics CSV file should be command line arguements, can be specified in any order with the corresponding options.
+bash practice.sh -d "destination" -s "source" -o "backup_statistics.csv"
+The source directotry, The destination directory, backup_statistics.csv file are command line arguements for the script, can be specified in any order with the corresponding options.
 
 **OPTIONS:**
 
@@ -18,4 +18,20 @@ These source, destination, statistics CSV file should be command line arguements
 
 
 **SCHEDULING AND CRON-TABS:**
-We can schedule the process by 
+
+crontab can be opened by using the command "crontab -e".
+
+We can automate the backup to a systematic and regular intervals by providing the approriate time and the command for running the script on approriate directories in the crontab.
+
+
+**GENERAL_FORMAT:** 
+
+<minutes> <hours> <day_of_month> <month_of_year> <day_of_week> <path_to_script> <-s source_directory> <-d destination_directory> <-o output_file>.
+
+Fields that are not applicable for specifying our custom scheduling can be replaced with '*'.
+
+The following is the format for running the script at 12am everyday.
+
+0 0 * * * bash <path_to_script> <-s source_directory> <-d destination_directory> <-o output_file>.
+
+
